@@ -1,0 +1,83 @@
+//Variables Colors
+$blue: #00c9ff;
+$lightBlue: #d0f1fa;
+
+// mixins
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+.App {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  .nav {
+    background: plum;
+    height: 10vh;
+    width: auto;
+    position: sticky;
+    top: 0;
+    img {
+      height: 8vh;
+      padding: 10px;
+      positions: left;
+    }
+  }
+  .markProfile {
+    height: 90vh;
+    width: auto;
+    background: pink;
+  }
+
+  .kayo {
+    height: 90vh;
+    background: aqua;
+    width: auto;
+  }
+
+  .contact {
+    height: 10vh;
+    width: auto;
+    font-size: 40px;
+    @include flex(space-around, center, row);
+    color: white;
+    background: $blue;
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
